@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -45,21 +46,21 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8 lg:space-x-12">
-            <div className="text-m font-medium text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
-              VIDEOGRAPHY
-            </div>
-            <div className="text-m font-medium text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
+            <Link href="/photography" className="text-m font-medium text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
               PHOTOGRAPHY
-            </div>
-            <div className="text-m font-medium text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
+            </Link>
+            <Link href="/videography" className="text-m font-medium text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
+              VIDEOGRAPHY
+            </Link>
+            <Link href="/production" className="text-m font-medium text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
               PRODUCTION
-            </div>
-            <div className="text-m font-medium text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
+            </Link>
+            <Link href="/about" className="text-m font-medium text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
               ABOUT
-            </div>
-            <div className="text-m font-medium text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
+            </Link>
+            <Link href="/contact" className="text-m font-medium text-gray-900 hover:text-gray-600 transition-colors cursor-pointer">
               CONTACT
-            </div>
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -79,21 +80,21 @@ export default function Header() {
         {/* Mobile Navigation Menu (hidden by default) */}
         <div className="md:hidden border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-            <div className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 cursor-pointer">
+            <Link href="/videography" className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 cursor-pointer">
               VIDEOGRAPHY
-            </div>
-            <div className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 cursor-pointer">
+            </Link>
+            <Link href="/photography" className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 cursor-pointer">
               PHOTOGRAPHY
-            </div>
-            <div className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 cursor-pointer">
+            </Link>
+            <Link href="/production" className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 cursor-pointer">
               PRODUCTION
-            </div>
-            <div className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 cursor-pointer">
+            </Link>
+            <Link href="/about" className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 cursor-pointer">
               ABOUT
-            </div>
-            <div className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 cursor-pointer">
+            </Link>
+            <Link href="/contact" className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 cursor-pointer">
               CONTACT
-            </div>
+            </Link>
           </div>
         </div>
       </div>
