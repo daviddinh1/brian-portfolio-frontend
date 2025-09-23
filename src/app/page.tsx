@@ -9,10 +9,8 @@ export default function Home() {
     <div className="flex flex-col justify-center items-center">
       <Header />
       <Hero />
+      <VideoFilm />
       <PhotographySection />
-      <div className="pt-20">
-        <VideoFilm />
-      </div>
     </div>
   );
 }
