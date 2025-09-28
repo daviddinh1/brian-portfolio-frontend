@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <>
-      <div className="h-screen w-screen flex items-center justify-center">
+      <div className="h-screen w-screen flex items-center justify-center pt-40">
         <div className="h-screen w-screen flex items-center justify-center">
           <Image
             src="/brian_0003.png"

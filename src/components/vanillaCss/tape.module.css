@@ -1,0 +1,104 @@
+/* tape.module.css */
+.tapeMasking {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 120px;
+  height: 40px;
+  z-index: 10;
+
+  /* Masking tape beige/tan color */
+  background: linear-gradient(
+    135deg,
+    rgba(245, 242, 235, 0.7) 0%,
+    rgba(240, 237, 229, 0.6) 50%,
+    rgba(245, 242, 235, 0.7) 100%
+  );
+
+  /* Subtle border */
+  border: 1px solid rgba(220, 217, 210, 0.4);
+
+  /* Soft shadows */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  /* Tape texture - paper-like feel */
+  background-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 4px
+    ),
+    linear-gradient(
+      135deg,
+      rgba(245, 242, 235, 0.7) 0%,
+      rgba(240, 237, 229, 0.6) 50%,
+      rgba(245, 242, 235, 0.7) 100%
+    );
+}
+
+/* Torn/serrated edges */
+.tapeMasking::before,
+.tapeMasking::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.tapeMasking::before {
+  top: -1px;
+  clip-path: polygon(
+    0% 0%,
+    5% 100%,
+    10% 0%,
+    15% 100%,
+    20% 0%,
+    25% 100%,
+    30% 0%,
+    35% 100%,
+    40% 0%,
+    45% 100%,
+    50% 0%,
+    55% 100%,
+    60% 0%,
+    65% 100%,
+    70% 0%,
+    75% 100%,
+    80% 0%,
+    85% 100%,
+    90% 0%,
+    95% 100%,
+    100% 0%
+  );
+}
+
+.tapeMasking::after {
+  bottom: -1px;
+  clip-path: polygon(
+    0% 100%,
+    5% 0%,
+    10% 100%,
+    15% 0%,
+    20% 100%,
+    25% 0%,
+    30% 100%,
+    35% 0%,
+    40% 100%,
+    45% 0%,
+    50% 100%,
+    55% 0%,
+    60% 100%,
+    65% 0%,
+    70% 100%,
+    75% 0%,
+    80% 100%,
+    85% 0%,
+    90% 100%,
+    95% 0%,
+    100% 100%
+  );
+}
