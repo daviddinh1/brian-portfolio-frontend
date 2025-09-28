@@ -8,17 +8,17 @@ export default function VideoFilm() {
   const videoSection = [
     {
       id: 1,
-      videoUrl: "https://www.youtube.com/watch?v=ogaqMfApnTg",
+      videoUrl: "/mixedMediaVids/raw edit.mp4",
       title: "test1",
     },
     {
       id: 2,
-      videoUrl: "https://www.youtube.com/watch?v=u6IZwnLuG5I&t=313s",
+      videoUrl: "/mixedMediaVids/v2 final.mp4",
       title: "test2",
     },
     {
       id: 3,
-      videoUrl: "https://www.youtube.com/watch?v=u6IZwnLuG5I&t=313s",
+      videoUrl: "/mixedMediaVids/V5 APT FINAL.mp4",
       title: "test3",
     },
   ];
@@ -76,13 +76,23 @@ export default function VideoFilm() {
               }`}
             >
               {/* this is where you edit the film */}
-              <iframe
+              {/* <iframe
                 src={getYouTubeEmbedUrl(video.videoUrl)}
                 title={video.title}
                 className="w-full h-full object-contain" // Add w-full h-full
                 frameBorder="0"
                 allowFullScreen
-              />
+              /> */}
+              <video
+                className="w-full h-full object-contain"
+                controls
+                preload="metadata"
+                // Auto-play current video (optional)
+                autoPlay={index === currentIndex}
+                // Muted to allow autoplay in most browsers
+              >
+                <source src={video.videoUrl} type="video/mp4" />
+              </video>
             </div>
           ))}
         </div>

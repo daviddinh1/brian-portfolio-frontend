@@ -5,14 +5,16 @@ import Polaroid from "@/components/Polaroid";
 import VideoFilm from "@/components/VideoFilm";
 import NewspaperWithVideo from "@/components/NewspaperWithVideo";
 import Footer from "@/components/Footer";
+import AboutSection from "@/components/AboutSection";
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center">
       <Header />
       <Hero />
       <VideoFilm />
-      <PhotographySection />
-      <NewspaperWithVideo />
+      {/* <PhotographySection />
+      <NewspaperWithVideo /> */}
+      <AboutSection />
       <Footer />
     </div>
   );
