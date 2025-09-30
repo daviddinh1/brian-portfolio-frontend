@@ -1,9 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import PhotographySection from "@/components/PhotographySection";
-import Polaroid from "@/components/Polaroid";
 import VideoFilm from "@/components/VideoFilm";
-import NewspaperWithVideo from "@/components/NewspaperWithVideo";
 import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
 export default function Home() {
@@ -12,8 +9,6 @@ export default function Home() {
       <Header />
       <Hero />
       <VideoFilm />
-      {/* <PhotographySection />
-      <NewspaperWithVideo /> */}
       <AboutSection />
       <Footer />
     </div>

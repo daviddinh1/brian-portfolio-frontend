@@ -8,7 +8,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center gap-7 p-20">
+    <div className="flex flex-col justify-center items-center gap-17 p-20">
       <div className="text-black font-bold text-5xl text-center">
         From cinematic videography to striking photography and innovative mixed
         media, here’s a showcase of projects crafted to inspire, engage, and
@@ -16,9 +16,11 @@ export default function AboutSection() {
         buttons below
       </div>
       <div className="flex justify-center items-center gap-10">
-        {links.map((link, index) => (
+        {links.map((link) => (
           <Link key={link.id} href={link.route}>
-            <InteractiveHoverButton>{link.text}</InteractiveHoverButton>
+            <InteractiveHoverButton className="text-2xl">
+              {link.text}
+            </InteractiveHoverButton>
           </Link>
         ))}
       </div>
